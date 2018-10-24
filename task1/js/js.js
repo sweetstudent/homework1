@@ -12,8 +12,13 @@ function reverse (data) {
 function register (data){
 	var i;
 	var letters = data.split('');
-	for (var i = 0; i < data.length; i+=2) {
-		letters[i]=letters[i].toUpperCase();
+	for(var i=0;i<data.length ;i++){    
+		if(([i]%2)==0){
+			letters[i]=letters[i].toUpperCase();
+		}
+		if(([i]%2)==1){
+			letters[i]=letters[i].toLocaleLowerCase();
+		}    
 	}
 	return letters.join('');
 }
